@@ -1,0 +1,9 @@
+# Specter-C2 Requirements
+# This project utilizes Python's standard library for core functionality.
+# No external pip packages are required for the base simulation.
+
+# Standard modules used:
+# - socket (Networking)
+# - subprocess (Command Execution)
+# - winreg (Registry Persistence)
+# - os, sys, time (System Utilities)

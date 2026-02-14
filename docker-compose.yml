@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  # THE ATTACKER (C2 SERVER)
+  attacker:
+    build: .
+    image: specter-c2-server
+    container_name: specter-attacker
+    networks:
+      - lab_network
+    command: python Specter_C2.py
+    stdin_open: true # Allows the recruiter to type commands
+    tty: true
+
+  # THE VICTIM (TARGET PAYLOAD)
+  victim:
+    build: .
+    image: specter-payload
+    container_name: specter-victim
+    depends_on:
+      - attacker
+    networks:
+      - lab_network
+    environment:
+      - C2_IP=attacker # It automatically finds the attacker
+    command: python Specter_Payload.py
+    restart: always # Demand 1: Persistence simulation
+
+networks:
+  lab_network:
+    driver: bridge
