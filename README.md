@@ -6,10 +6,10 @@
 
 | Requirement | Implementation | Status |
 | :--- | :--- | :--- |
-| **Persistence** | Windows Registry 'Run' key injection (`winreg`) [cite: 2026-02-14] | ✅ Active |
-| **Stealth** | Background processing via `python` [cite: 2026-02-14] | ✅ Active |
-| **Remote Access** | Reverse-TCP Command & Control (C2) [cite: 2026-02-14] | ✅ Active |
-| **Resilience** | Automated re-connection logic [cite: 2026-02-14] | ✅ Active |
+| **Persistence** | Windows Registry 'Run' key injection (`winreg`) | ✅ Active |
+| **Stealth** | Background processing via `python`  | ✅ Active |
+| **Remote Access** | Reverse-TCP Command & Control (C2) | ✅ Active |
+| **Resilience** | Automated re-connection logic | ✅ Active |
 
 ## 🛠️ Installation & Setup
 
